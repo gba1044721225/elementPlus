@@ -1,4 +1,4 @@
-# vue_test
+# vue_test Makichan
 
 ## Project setup
 ```
