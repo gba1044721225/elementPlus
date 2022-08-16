@@ -10,7 +10,7 @@
         <el-icon>
           <component :is="item.icon"></component>
         </el-icon>
-        <span>{{ item.authName }}</span>
+        <span>{{ $t(`menus.${item.path}`) }}</span>
       </template>
       <!-- 再次调用自身组件，传入子集，进行循环递归调用 -->
       <Menu :list="item.children"></Menu>
@@ -27,7 +27,7 @@
       <el-icon>
         <component :is="item.icon"></component>
       </el-icon>
-      <span>{{ item.authName }}{{ keyValue }}</span>
+      <span>{{ $t(`menus.${item.path}`) }}</span>
     </el-menu-item>
   </template>
 </template>
@@ -46,7 +46,7 @@ import {
   Setting
 } from '@element-plus/icons-vue'
 
-import { computed, defineProps, reactive } from 'vue'
+import { computed, reactive } from 'vue'
 import { useRouter } from 'vue-router'
 // console.log(props)
 
